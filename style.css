@@ -2,7 +2,7 @@
 
 body, html {
     padding: 0;
-    margin: 0;s
+    margin: 0;
     background: #131212;
     overflow-x: hidden;
     overflow-y: hidden;
@@ -698,7 +698,7 @@ button.more-services:hover {
     opacity: 0;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 900px) {
     .main-title,
     .main-title span.highlight,
     .main-title span.end {
