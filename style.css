@@ -699,6 +699,10 @@ button.more-services:hover {
 }
 
 @media (max-width: 900px) {
+    ::-webkit-scrollbar {
+        display: none;
+    }
+    
     .main-title,
     .main-title span.highlight,
     .main-title span.end {
