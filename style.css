@@ -827,10 +827,9 @@ button.more-services:hover {
         margin-top: 3vw;
     }
 
-    .few-services-info {
+    .services-few span.few-services-info {
         display: none;
     }
-
     .services-few {
         width: 50vw;
         height: 6vh;
