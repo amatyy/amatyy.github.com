@@ -714,7 +714,7 @@ button.more-services:hover {
     .main-subtitle {
         font-size: 25px;
         left: 9vw;
-        top: 35vh;
+        top: 32vh;
         width: 90vw;
     }
 
@@ -730,7 +730,7 @@ button.more-services:hover {
         position: absolute;
         transform: translate(0vw, 0vw);
         left: 2.5vw;
-        top: 30vh;
+        top: 25vh;
         width: 38vw;
         height: 6vh;
     }
