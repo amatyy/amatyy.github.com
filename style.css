@@ -732,12 +732,12 @@ button.more-services:hover {
         left: 2.5vw;
         top: 27vh;
         width: 45vw;
-        height: 6vh;
+        height: 12vw;
     }
 
     .main-button {
         width: 45vw;
-        height: 6vh;
+        height: 12vw;
         border-radius: 9vw;
         background: linear-gradient(145deg, #ffd613, #584900);
         font-size: 18px;
