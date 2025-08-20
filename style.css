@@ -828,11 +828,11 @@ button.more-services:hover {
     }
 
     .services-few span.few-services-info {
-        display: none;
+        display: none !important;
     }
 
     .services-few span.few-services-info.hidden {
-        display: none;
+        display: none !important;
     }
     
     .services-few {
