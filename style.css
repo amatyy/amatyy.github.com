@@ -830,6 +830,11 @@ button.more-services:hover {
     .services-few span.few-services-info {
         display: none;
     }
+
+    .services-few span.few-services-info.hidden {
+        display: none;
+    }
+    
     .services-few {
         width: 50vw;
         height: 6vh;
