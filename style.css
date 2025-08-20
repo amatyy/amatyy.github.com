@@ -730,13 +730,13 @@ button.more-services:hover {
         position: absolute;
         transform: translate(0vw, 0vw);
         left: 2.5vw;
-        top: 25vh;
-        width: 38vw;
+        top: 27vh;
+        width: 45vw;
         height: 6vh;
     }
 
     .main-button {
-        width: 38vw;
+        width: 45vw;
         height: 6vh;
         border-radius: 9vw;
         background: linear-gradient(145deg, #ffd613, #584900);
@@ -755,7 +755,7 @@ button.more-services:hover {
 
     .image-1 {
         left: 9vw;
-        top: 56vh;
+        top: 150vw;
         width: 138.12px;
         height: 242.66px;
         border-radius: 30px 0 30px 0;
@@ -763,7 +763,7 @@ button.more-services:hover {
 
     .image-2 {
         left: 50vw;
-        top: 50vh;
+        top: 117vw;
         width: 150.47px;
         height: 172.97px;
         border-radius: 30px 30px 0 0;
@@ -771,7 +771,7 @@ button.more-services:hover {
 
     .image-3 {
         left: 50vw;
-        top: calc(70.5vh + 18px);
+        top: 165vw;
         width: 170.77px;
         height: 175.06px;
         border-radius: 0 30px 30px 30px;
