@@ -763,7 +763,7 @@ button.more-services:hover {
 
     .image-2 {
         left: 50vw;
-        top: 49vh;
+        top: 50vh;
         width: 150.47px;
         height: 172.97px;
         border-radius: 30px 30px 0 0;
@@ -775,6 +775,7 @@ button.more-services:hover {
         width: 170.77px;
         height: 175.06px;
         border-radius: 0 30px 30px 30px;
+        margin-top: 10px;
     }
 
     .box-2 {
@@ -828,13 +829,9 @@ button.more-services:hover {
     }
 
     .services-few span.few-services-info {
-        display: none !important;
+        display: none;
     }
 
-    .services-few span.few-services-info.hidden {
-        display: none !important;
-    }
-    
     .services-few {
         width: 50vw;
         height: 6vh;
@@ -853,5 +850,9 @@ button.more-services:hover {
 
     .services-few button.more-services:hover {
         background: linear-gradient(145deg, #ffd613, #584900);
+    }
+
+    :is(.image-1, .image-2, .image-3):hover {
+        transform: translate(-1vw, 0%) scale(1.0);
     }
 }
