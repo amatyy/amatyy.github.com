@@ -779,7 +779,10 @@ button.more-services:hover {
     }
 
     .box-2 {
-        top: 400px;
+        position: absolute;
+        transform: translate(1px, 1px);
+        left: 6vw;
+        top: 840px;
     }
 
     .services-title {
