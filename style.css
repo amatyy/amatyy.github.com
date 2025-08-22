@@ -723,10 +723,7 @@ button.more-services:hover {
     }
 
     .box, .box-2, .box-3, .box-4 {
-        width: 106px;
-        height: 63px;
-        background-image: radial-gradient(circle, #333 2px, transparent 2px);
-        background-size: 10px 10px;
+        display: none;
     }
 
     .main-button-template.services {
