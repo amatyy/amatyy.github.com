@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Detailing</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://kit-pro.fontawesome.com/releases/v6.6.0/css/pro.min.css">
+    <link rel="stylesheet" href="https://kit-pro.fontawesome.com/releases/v7.0.0/css/pro.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 <body>
     <div class="in">
@@ -15,10 +16,67 @@
     </div>
 
     <div class="page-content">
+        
+        <div class="asl">
+            <div class="box1-2"></div>
+            <div class="main-title-2" data-i18n="allServicesTitle"></div>
+
+            <div class="back-to-main"><i class="fat fa-house"></i></div>
+
+            <div class="all-services-list">
+                <div class="ofa-service hand-washing">Ręczne mycie detailingowe</div>
+                <div class="ofa-service">Czyszczenie wnętrza</div>
+                <div class="ofa-service">Pranie tapicerki</div>
+                <div class="ofa-service">Ozonowanie wnętrza</div>
+                <div class="ofa-service">Korekta lakieru</div>
+                <div class="ofa-service">Powłoki ceramiczne</div>
+                <div class="ofa-service">Aplikacja wosków</div>
+                <div class="ofa-service">Inspekcja podwozia</div>
+                <div class="ofa-service">Zabezpieczenie antykorozyjne</div>
+                <div class="ofa-service">Malowanie i impregnacja</div>
+                <div class="ofa-service">Ochrona wnęk nadkoli</div>
+                <div class="ofa-service">Ochrona progów</div>
+                <div class="ofa-service">Ochrona podwozia do 8 lat</div>
+                <div class="ofa-service">Wymiana olejów</div>
+                <div class="ofa-service">Wymiana filtrów</div>
+                <div class="ofa-service">Diagnostyka komputerowa</div>
+                <div class="ofa-service">Naprawy zawieszenia</div>
+                <div class="ofa-service">Naprawy układu hamulcowego</div>
+                <div class="ofa-service">Naprawy układu kierowniczego</div>
+                <div class="ofa-service">Serwis klimatyzacji</div>
+                <div class="ofa-service">Montaż i serwis systemów car audio</div>
+            </div>
+            <div class="hovered-info">
+                <span class="hovered-info-vehicle">Motocykl</span>
+            </div>
+            <div class="service-details">
+                <button class="service-details-back"><i class="fat fa-octagon-xmark"></i></button>
+
+                <div class="service-name">Ręczne mycie detailingowe</div>
+
+                <video class="service-preview" controls>
+                    <source src="services/service-1.mp4" type="video/mp4">
+                    Twoja przeglądarka nie obsługuje odtwaracza wideo.
+                </video>
+
+                <div class="service-desc">
+                    <span><b>Ręczne mycie detailingowe</b> to kompleksowa usługa, która przywraca Twojemu samochodowi <b>czystość</b> i <b>świeży wygląd</b>, skupiając się na każdym detalu. Proces obejmuje:</span>
+                    <ul>
+                        <li><b>Mycie ręczne karoserii</b> przy użyciu miękkiej ściereczki z mikrofibry, wody oraz specjalistycznych chemikaliów usuwających nawet najbardziej uporczywe zabrudzenia, owady i smołę.</li>
+                        <li><b>Mycie przy użyciu myjki ciśnieniowej</b> z dedykowanymi płynami wspomagającymi czyszczenie, które skutecznie przygotowują powierzchnię do dalszej pielęgnacji.</li>
+                        <li><b>Czyszczenie szyb, felg i opon</b>, zapewniające idealną przejrzystość szyb oraz lśniące felgi i opony.</li>
+                        <li><b>Wnętrze samochodu</b> – mycie i wycieranie plastików, a także dokładne czyszczenie kierownicy, dbając o komfort i higienę w kabinie pojazdu.</li>
+                    </ul>
+                    <span>Usługa jest wykonywana z najwyższą starannością, tak aby każdy detal auta był perfekcyjnie oczyszczony, a samochód prezentował się jak nowy.</span>
+                </div>
+
+                <div class="service-price"></div>
+            </div>
+        </div>
+
         <div class="scroll-up"><i class="fas fa-arrow-up"></i></div>
 
         <div class="box main-hidden"></div>
-        <div class="box-2 hidden"></div>
     
         <div class="main-page">
             <div class="menu main-hidden">
@@ -55,9 +113,12 @@
             <div class="image-1 main-hidden"></div>
             <div class="image-2 main-hidden"></div>
             <div class="image-3 main-hidden"></div>
+
         </div>
     
         <div class="services-page">
+            <div class="box-2 hidden"></div>
+
             <div class="services-title hidden transitionable" data-i18n="servicesTitle"></div>
     
             <div class="services-list">
@@ -99,39 +160,52 @@
             </div>        
     
             <div class="services-few">
-                <span data-i18n="fewServicesInfo" class="hidden transitionable few-services-info"></span>
+                <span data-i18n="fewServicesInfo" class="few-services-info hidden transitionable"></span>
     
                 <button class="more-services hidden" data-i18n="seeMoreServices"></button>
             </div>
         </div>
     
         <div class="about-page">
+            <div class="box-3 hidden"></div>
+
             <div class="about-title hidden transitionable" data-i18n="aboutTitle"></div>
     
             <div class="about-content hidden transitionable" data-i18n="aboutContent"></div>
-    
-            <div class="box-3 hidden"></div>
+
+            <div class="about-socials">
+                <i class="fa-brands fa-facebook" id="FBL"></i>
+                <i class="fa-brands fa-instagram" id="IGL"></i>
+            </div>
+
+            <div class="about-socials-pc">
+                <i class="fa-brands fa-facebook" id="FBL2"></i>
+                <i class="fa-brands fa-instagram" id="IGL2"></i>
+            </div>
         </div>
     
         <div class="contact-page">
+            <div class="box-4 hidden"></div>
+
             <div class="contact-title hidden transitionable" data-i18n="contactTitle"></div>
     
             <div class="contact-info">
                 <div class="mail info hidden transitionable">
                     <i class="fat fa-envelope"></i>
-                    mail@mail.com
+                    <span class="mail-address-info">mail@mail.com</span>
                 </div>
     
                 <div class="phone info hidden transitionable">
                     <i class="fat fa-phone"></i>
-                    123 456 789
+                    <span class="phone-number-info">123 456 789</span>
                 </div>
     
                 <div class="pin info hidden transitionable">
                     <i class="fat fa-location-dot"></i>
-                    ul. Ruska 51/3, 50-079 Wrocław, Dolnośląskie
                 </div>
             </div>
+
+            <div class="contact-info-data">123-456-789</div>
     
             <form class="contact-container">
                 <input type="text" class="name hidden transitionable" placeholder="Name" required>
@@ -143,18 +217,15 @@
     
                 <div class="characters hidden transitionable">0/1000</div>
             </div>
-    
-            <div class="box-4 hidden"></div>
         </div>
     
         <div class="footer">
             &copy; 2025 COMPANY. Wszelkie prawa zastrzeżone.
     
             <div class="social">
-                <span data-i18n="follow"></span>
                 <div class="socials">
-                    <i class="fa-brands fa-facebook" id="FBL"></i>
-                    <i class="fa-brands fa-instagram" id="IGL"></i>
+                    <i class="fa-brands fa-facebook" id="FBL2"></i>
+                    <i class="fa-brands fa-instagram" id="IGL2"></i>
                 </div>
             </div>
         </div>
