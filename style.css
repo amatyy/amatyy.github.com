@@ -904,11 +904,19 @@ i.fa-location-dot {
 
     .main-title,
     .main-title span.highlight,
-    .main-title span.end {
+    .main-title span.end,
+    .main-title-2 {
         font-size: 40px;
     }
 
-    .main-title {
+    .back-to-main i {
+        font-size: 30px;
+        position: absolute;
+        top: 10vw;
+        left: 80vw;
+    }
+
+    .main-title, .main-title-2 {
         width: 90vw;
         top: 5vh;
         left: 9vw;
@@ -1195,5 +1203,46 @@ i.fa-location-dot {
         width: 90vw;
         gap: 15px;
         margin-top: 15px;
+    }
+
+    .box1-2 {
+        display: none;
+    }
+
+    .all-services-list {
+        width: 90vw;
+        height: 80vh;
+        overflow: auto;
+        gap: 10px;
+        top: 58%;
+        padding-right: 2vw;
+    }
+
+    .all-services-list::-webkit-scrollbar {
+        display: block;
+    }
+
+    .all-services-list::-webkit-scrollbar-thumb {
+        display: block;
+        width: 1vw;
+        background: #ffd613;
+    }
+
+    .ofa-service {
+        width: 100%;
+        padding-top: 25px;
+        padding-bottom: 25px;
+        font-size: 20px;
+        color: #0e0e0e;
+        background: linear-gradient(145deg, #ffd613, #7e6900);
+        border-radius: 50px;
+        transition: transform .5s;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .ofa-service:hover {
+        transform: none;
     }
 }
