@@ -13,6 +13,8 @@ let HCMessage = document.querySelector(".message-content");
 
 const FBL = document.getElementById("FBL");
 const IGL = document.getElementById("IGL");
+const FBL2 = document.getElementById("FBL2");
+const IGL2 = document.getElementById("IGL2");
 
 let BackToTop = document.querySelector(".scroll-up");
 let ShowAllServices = document.querySelector(".more-services");
@@ -22,7 +24,19 @@ let ContactUs = document.querySelector(".contact-us-button");
 
 let welcomePage = document.querySelector(".in");
 let welcomeText = document.querySelector(".in-welcome");
-let welcomeTransition = document.querySelector(".transition")
+let welcomeTransition = document.querySelector(".transition");
+
+let cd = document.querySelector(".contact-info-data");
+
+let contactButtons = {
+    "mail": document.querySelector(".mail"),
+    "phone": document.querySelector(".phone")
+}
+
+let contactDataList = {
+    "mail": "mail@mail.com",
+    "phone": "123-456-789"
+}
 
 let Scroll = {
     "home": document.querySelector(".home"),
@@ -32,10 +46,101 @@ let Scroll = {
 }
 
 let ScrollValue = {
-    "home": 0,
-    "services": 735,
-    "about": 1470,
-    "contact": 2205,
+    "home": document.querySelector(".main-page"),
+    "services": document.querySelector(".services-page"),
+    "about": document.querySelector(".about-page"),
+    "contact": document.querySelector(".contact-page"),
+}
+
+let ServicesPriceList = {
+    "HandWashing": {
+        "Motorcycle": 120,
+        "SmallCar": 180,
+        "MediumCar": 220,
+        "SUV": 260,
+        "Van": 300,
+        "SmallDeliveryTruck": 330,
+        "BigDeliveryTruck": 400,
+        "Bus": 500
+    }
+}
+
+let ServicesVehiclesList = {
+    "Motorcycle": "motorcycle",
+    "SmallCar": "car",
+    "MediumCar": "car",
+    "SUV": "truck-suv",
+    "Van": "van",
+    "SmallDeliveryTruck": "truck",
+    "BigDeliveryTruck": "truck",
+    "Bus": "bus-side"
+}
+
+let ServicesVehiclesName = {
+    "pl": {
+        "motorcycle": "Motocykl",
+        "scar": "Samochód osobowy (mały)",
+        "mcar": "Samochód osobowy (średni)",
+        "suv": "SUV",
+        "van": "Van",
+        "sdt": "Samochód dostawczy (mały)",
+        "bdt": "Samochód dostawczy (duży)",
+        "bus": "Bus"
+    }
+}
+
+let ServicesClasses = {
+    "Motorcycle": "motorcycle",
+    "SmallCar": "scar",
+    "MediumCar": "mcar",
+    "SUV": "suv",
+    "Van": "van",
+    "SmallDeliveryTruck": "sdt",
+    "BigDeliveryTruck": "bdt",
+    "Bus": "bus"
+}
+
+let ServicePrice = document.querySelector(".service-price");
+
+let bIsDetailsOpen = true; // jeśli false --- hoveredInfo -> display: none;
+
+let hoveredInfo = document.querySelector(".hovered-info");
+let hoveredInfoVehicle = document.querySelector(".hovered-info-vehicle");
+
+let SDBack = document.querySelector(".service-details-back");
+
+const SD = document.querySelector(".service-details");
+const ASL = document.querySelector(".asl");
+
+let ASLBack = document.querySelector(".back-to-main");
+
+let Services = {
+    "handWashing": document.querySelector(".ofa-service.hand-washing")
+}
+
+for (const key in Services) {
+    Services[key].addEventListener("click", ()=>{
+        SD.style.display = "block";
+
+        setTimeout(() => {
+            SD.style.opacity = "1";
+            SD.style.transform = "translate(-50%, -50%) scale(1)";
+        }, 0);
+    })
+}
+
+function CreatePrices(icon, price, name) {
+    const html = `<div class="vehicle ${name}">
+                        <div class="vehicle-icon"><i class="fa-solid fa-${icon}"></i></div>
+
+                        <div class="price">${price}zł</div>
+                    </div>`;
+    
+    ServicePrice.insertAdjacentHTML("beforeend", html)
+}
+
+for (const key in ServicesVehiclesList) {
+    CreatePrices(ServicesVehiclesList[key], ServicesPriceList["HandWashing"][key], ServicesClasses[key]);
 }
 
 if (HCMessage) {
@@ -57,14 +162,23 @@ if (IGL) {
     })
 }
 
+if (FBL2) {
+    FBL2.addEventListener("click", ()=>{
+        window.open("https://www.facebook.com/dawid.pierog");
+    })
+}
+
+if (IGL2) {
+    IGL2.addEventListener("click", ()=>{
+        window.open("https://www.instagram.com/cardetailing_d.pierog")
+    })
+}
+
 for (let key in Scroll) {
     if (Scroll[key]) {
-        Scroll[key].addEventListener("click", ()=>{
-            window.scrollTo({
-                top: ScrollValue[key],
-                behavior: "smooth"
-            })
-        })
+        Scroll[key].addEventListener("click", () => {
+            ScrollValue[key].scrollIntoView({ behavior: "smooth" });
+        });
     }
 }
 
@@ -85,21 +199,35 @@ if (BackToTop) {
     })
 }
 
+let int;
+
 if (ShowAllServices) {
     ShowAllServices.addEventListener("click", ()=>{
-        window.location.href = "services.html";
-    })
-}
+        ASL.style.display = "block";
 
-if (BTMain) {
-    BTMain.addEventListener("click", ()=>{
-        window.location.href = "index.html"
+        setTimeout(() => {
+            ASL.style.opacity = "1";
+        }, 0);
+
+        int = setInterval(() => {
+            document.body.style.overflow = "hidden";
+            document.documentElement.style.overflow = "hidden";
+        }, 10);
     })
 }
 
 if (MMServices) {
     MMServices.addEventListener("click", ()=>{
-        window.location.href = "services.html"
+        ASL.style.display = "block";
+
+        setTimeout(() => {
+            ASL.style.opacity = "1";
+        }, 0);
+
+        int = setInterval(() => {
+            document.body.style.overflow = "hidden";
+            document.documentElement.style.overflow = "hidden";
+        }, 10);
     })
 }
 
@@ -136,6 +264,25 @@ async function setLanguage(lang) {
         spanEnd.className = 'end';
         spanEnd.textContent = translations.mainTitleEnd;
         mainDiv.appendChild(spanEnd);
+    }
+
+    if (translations.placeholders) {
+        const { name, email, phone, message, submit } = translations.placeholders;
+
+        const nameInput = document.querySelector('.name');
+        if (nameInput) nameInput.placeholder = name || nameInput.placeholder;
+
+        const emailInput = document.querySelector('.email');
+        if (emailInput) emailInput.placeholder = email || emailInput.placeholder;
+
+        const phoneInput = document.querySelector('.phone-number');
+        if (phoneInput) phoneInput.placeholder = phone || phoneInput.placeholder;
+
+        const messageTextarea = document.querySelector('.message-content');
+        if (messageTextarea) messageTextarea.placeholder = message || messageTextarea.placeholder;
+
+        const submitInput = document.querySelector('.send');
+        if (submitInput) submitInput.value = submit || submitInput.value;
     }
 }
 
@@ -264,3 +411,73 @@ function mainPageShow() {
         }, 800);
     }, 100);
 }
+
+for (const key in contactButtons) {
+    contactButtons[key].addEventListener("click", ()=>{
+        if (cd.style.opacity === "0") {
+            cd.textContent = contactDataList[key];
+            setTimeout(() => {
+                cd.style.opacity = "1"
+            }, 0);
+        } else {
+            cd.style.opacity = "0"
+            
+            setTimeout(() => {
+                cd.textContent = contactDataList[key];
+                setTimeout(() => {
+                    cd.style.opacity = "1"
+                }, 10);
+            }, 500);
+        }
+    })
+}
+
+const vehicles = document.querySelectorAll(".vehicle");
+
+if (vehicles) {
+    vehicles.forEach(vehicle => {
+        vehicle.addEventListener("mouseover", ()=>{
+            const classes = vehicle.classList;
+            let vehicleClass = Array.from(classes).find(c => c !== "vehicle");
+
+            hoveredInfoVehicle.textContent = ServicesVehiclesName[currentLang][vehicleClass]
+            hoveredInfo.style.opacity = "1";
+        });
+
+        vehicle.addEventListener("mouseout", ()=>{
+            hoveredInfo.style.opacity = "0";
+        })
+    })
+}
+
+document.addEventListener('mousemove', (event) => {
+    const x = event.clientX;
+    const y = event.clientY;
+
+    hoveredInfo.style.left = `${x}px`;
+    hoveredInfo.style.top = `${y-25}px`;
+});
+
+SDBack.addEventListener("click", ()=>{
+    SD.style.opacity = "0";
+    
+    setTimeout(() => {
+        SD.style.display = "none";
+    }, 1000);
+})
+
+ASLBack.addEventListener("click", ()=>{
+    ASL.style.opacity = '0';
+    setTimeout(() => {
+        ASL.style.display = "none";
+    }, 1000);
+
+    document.body.style.overflow = "auto";
+    document.body.style.overflowY = "auto";
+    document.body.style.overflowX = "hidden";
+    document.documentElement.style.overflow = "auto";
+    document.documentElement.style.overflowY = "auto";
+    document.documentElement.style.overflowX = "hidden";
+
+    clearInterval(int);
+})
