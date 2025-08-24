@@ -5,7 +5,7 @@
     "mainSubtitle": "zapewniamy wyoską jakość usług detailingowych",
     "mainServices": "Usługi",
     "mainContact": "Kontakt",
-    "servicesTitle": "Nasze usługi",
+    "servicesTitle": "nasze usługi",
     "firstServiceName": "Full Car Care",
     "secondServiceName": "Wymiana olejów",
     "thirdServiceName": "Ochrona podwozia",
@@ -19,13 +19,15 @@
     "aboutTitle": "o nas",
     "aboutContent": "Cześć! Jesteśmy NAZWA, zespołem tworzącym rozwiązania, które (mamy nadzieje) ułatwiają życie. Obecnie jesteśmy w fazie beta, testujemy różne rzeczy i dopracowujemy to, w czym jesteśmy najlepsi. Zostań z nami – rozwijamy się, eksperymentujemy i jesteśmy podekscytowani tym, dokąd to zmierza.",
     "contactTitle": "skontaktuj się z nami",
-    "contactName": "Imię",
-    "contactEmail": "Email",
-    "contactPhone": "Numer telefonu",
-    "contactMessage": "Twoja wiadomość",
-    "contactSend": "Prześlij",
     "copyright": "Wszelkie prawa zastrzeżone.",
     "follow": "zacznij obserwować",
     "allServicesTitle": "usługi",
-    "welcomeText": "Witaj"
+    "welcomeText": "Witaj",
+    "placeholders": {
+        "name": "Imię",
+        "email": "Email",
+        "phone": "Numer telefonu",
+        "message": "Twoja wiadomość",
+        "submit": "Wyślij"
+    }
 }
