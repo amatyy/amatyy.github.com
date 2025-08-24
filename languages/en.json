@@ -19,13 +19,15 @@
     "aboutTitle": "about us",
     "aboutContent": "Hey there! We're NAME, a team building solutions that (hopefully) make life a bit easier. Right now, we're in beta, figuring things out and shaping what we do best. Stick around – we're growing, experimenting, and excited to see where this goes.",
     "contactTitle": "contact with us",
-    "contactName": "Name",
-    "contactEmail": "Email",
-    "contactPhone": "Phone number",
-    "contactMessage": "Your message",
-    "contactSend": "Send",
     "copyright": "All rights reserved.",
     "follow": "follow",
     "allServicesTitle": "services",
-    "welcomeText": "Welcome"
+    "welcomeText": "Welcome",
+    "placeholders": {
+        "name": "Name",
+        "email": "Email",
+        "phone": "Phone number",
+        "message": "Your message",
+        "submit": "Send"
+    }
 }
