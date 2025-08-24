@@ -15,16 +15,18 @@
     "fourthServiceContent": "Ofrecemos pintura profesional de la carrocería y retoques menores, devolviendo a tu vehículo un aspecto pulido e impecable.",
     "fewServicesInfo": "Estos son solo algunos de los muchos servicios que ofrecemos.",
     "seeMoreServices": "Ver todos",
-    "aboutTitle": "Sobre nosotros",
+    "aboutTitle": "sobre nosotros",
     "aboutContent": "¡Hola! Somos NAME, un equipo que crea soluciones que (esperamos) hagan la vida un poco más fácil. Por ahora estamos en beta, descubriendo cosas y definiendo lo que hacemos mejor. Quédate por aquí: estamos creciendo, experimentando y emocionados de ver hacia dónde vamos.",
     "contactTitle": "contacta con nosotros",
-    "contactName": "Nombre",
-    "contactEmail": "Email",
-    "contactPhone": "Número de teléfono",
-    "contactMessage": "Tu mensaje",
-    "contactSend": "Enviar",
-    "copyright": "All rights reserved.",
-    "follow": "follow",
+    "copyright": "Todos los derechos reservados.",
+    "follow": "Empieza a seguir",
     "allServicesTitle": "servicios",
-    "welcomeText": "Hola"
+    "welcomeText": "Hola",
+    "placeholders": {
+        "name": "Nombre",
+        "email": "Email",
+        "phone": "Número de teléfono",
+        "message": "Tu mensaje",
+        "submit": "Enviar"
+    }
 }
